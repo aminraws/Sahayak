@@ -1,0 +1,699 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f8f4ee;
+    color: #29231f;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5ddd3;
+    background: #f8f4ee;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #29231f;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8b4b36;
+    color: white;
+    border-radius: 9px;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+}
+
+
+.navbar nav {
+    display: flex;
+    gap: 32px;
+}
+
+
+.navbar nav a {
+    text-decoration: none;
+    color: #655d56;
+    font-size: 14px;
+}
+
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #8b4b36;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+
+.nav-right span {
+    font-size: 14px;
+    color: #655d56;
+}
+
+
+.nav-right button {
+    border: 1px solid #8b4b36;
+    background: transparent;
+    color: #8b4b36;
+    padding: 9px 20px;
+    border-radius: 7px;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 84%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 30px 0 80px;
+}
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.breadcrumb {
+    margin-bottom: 32px;
+}
+
+
+.breadcrumb a {
+    color: #756c64;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+.breadcrumb a:hover {
+    color: #8b4b36;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+
+.page-heading > p:first-child {
+    color: #8b4b36;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+
+.page-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 45px;
+    line-height: 1.15;
+}
+
+
+.page-heading h1 span {
+    color: #9b5940;
+    font-style: italic;
+}
+
+
+.heading-description {
+    color: #756c64;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.request-layout {
+    display: grid;
+    grid-template-columns: 1.65fr 0.75fr;
+    gap: 26px;
+    align-items: start;
+}
+
+
+/* =========================
+   REQUEST CARD
+========================= */
+
+.request-card {
+    background: white;
+    border: 1px solid #e7ded4;
+    border-radius: 14px;
+    padding: 34px;
+}
+
+
+.request-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.request-status {
+    display: inline-block;
+    color: #8b4b36;
+    background: #eee3d7;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+
+.request-top h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 29px;
+    margin-bottom: 6px;
+}
+
+
+.request-subtitle {
+    color: #756c64;
+    font-size: 13px;
+}
+
+
+.price {
+    text-align: right;
+}
+
+
+.price span {
+    display: block;
+    color: #8b8179;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    margin-bottom: 5px;
+}
+
+
+.price strong {
+    font-family: "Playfair Display", serif;
+    color: #8b4b36;
+    font-size: 29px;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    height: 1px;
+    background: #eee6dd;
+    margin: 26px 0;
+}
+
+
+/* =========================
+   DETAIL SECTION
+========================= */
+
+.detail-section {
+    margin-bottom: 27px;
+}
+
+
+.detail-label {
+    color: #8b8179;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 13px;
+}
+
+
+/* CUSTOMER */
+
+.customer {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.customer-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #eee3d7;
+    color: #8b4b36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+}
+
+
+.customer h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+
+.customer p {
+    color: #8b4b36;
+    font-size: 11px;
+}
+
+
+/* =========================
+   DATE / TIME
+========================= */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 27px;
+}
+
+
+.detail-box {
+    border: 1px solid #e7ded4;
+    background: #fcfaf7;
+    border-radius: 9px;
+    padding: 17px;
+}
+
+
+.detail-box span {
+    display: block;
+    color: #8b8179;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    margin-bottom: 8px;
+}
+
+
+.detail-box strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+
+.detail-box p {
+    color: #8b8179;
+    font-size: 11px;
+}
+
+
+/* =========================
+   ADDRESS
+========================= */
+
+.address-box {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #fcfaf7;
+    border: 1px solid #e7ded4;
+    border-radius: 9px;
+    padding: 17px;
+}
+
+
+.address-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #eee3d7;
+    color: #8b4b36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
+.address-box strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+
+.address-box p {
+    color: #756c64;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+
+.instructions {
+    background: #f8f4ee;
+    border-left: 3px solid #9b5940;
+    padding: 15px 17px;
+    border-radius: 0 8px 8px 0;
+}
+
+
+.instructions p {
+    color: #665d55;
+    font-size: 12px;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.request-actions {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+
+.decline-btn,
+.accept-btn {
+    text-decoration: none;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.decline-btn {
+    border: 1px solid #d8cec4;
+    color: #665d55;
+    background: white;
+}
+
+
+.decline-btn:hover {
+    border-color: #8b4b36;
+    color: #8b4b36;
+}
+
+
+.accept-btn {
+    background: #8b4b36;
+    color: white;
+}
+
+
+.accept-btn:hover {
+    background: #713b2b;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.request-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+.summary-card {
+    background: #eee3d7;
+    border-radius: 14px;
+    padding: 27px;
+}
+
+
+.sidebar-label {
+    color: #8b4b36;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    margin-bottom: 23px;
+}
+
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+
+.summary-row span {
+    color: #766b62;
+    font-size: 12px;
+}
+
+
+.summary-row strong {
+    font-size: 12px;
+    text-align: right;
+}
+
+
+.summary-card .divider {
+    background: #d7c9bb;
+    margin: 22px 0;
+}
+
+
+.earning-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.earning-row span {
+    color: #655b53;
+    font-size: 12px;
+}
+
+
+.earning-row strong {
+    color: #8b4b36;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+
+/* =========================
+   TIP CARD
+========================= */
+
+.tip-card {
+    background: white;
+    border: 1px solid #e7ded4;
+    border-radius: 14px;
+    padding: 27px;
+}
+
+
+.tip-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #eee3d7;
+    color: #8b4b36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+
+.tip-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+
+.tip-card > p {
+    color: #756c64;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.tip-line {
+    height: 1px;
+    background: #eee6dd;
+    margin: 20px 0;
+}
+
+
+.tip-point {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+
+.tip-point span {
+    color: #8b4b36;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+
+.tip-point p {
+    color: #655d56;
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    main {
+        width: 90%;
+    }
+
+
+    .request-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .request-sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+
+    .navbar nav {
+        display: none;
+    }
+
+
+    .nav-right span {
+        display: none;
+    }
+
+
+    main {
+        padding-top: 25px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 37px;
+    }
+
+
+    .request-card {
+        padding: 25px;
+    }
+
+
+    .request-top {
+        flex-direction: column;
+    }
+
+
+    .price {
+        text-align: left;
+    }
+
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .request-sidebar {
+        display: flex;
+    }
+
+
+}
+
+
+@media (max-width: 480px) {
+
+    .request-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .request-card,
+    .summary-card,
+    .tip-card {
+        padding: 21px;
+    }
+
+}

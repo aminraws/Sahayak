@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f8f4ee;
+    color: #29231f;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5ddd3;
+    background: #f8f4ee;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #29231f;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8b4b36;
+    color: white;
+    border-radius: 9px;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+}
+
+
+.navbar nav {
+    display: flex;
+    gap: 38px;
+}
+
+
+.navbar nav a {
+    text-decoration: none;
+    color: #655d56;
+    font-size: 14px;
+}
+
+
+.navbar nav a:hover {
+    color: #8b4b36;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+
+.nav-right span {
+    font-size: 14px;
+    color: #655d56;
+}
+
+
+.nav-right button {
+    border: 1px solid #8b4b36;
+    background: transparent;
+    color: #8b4b36;
+    padding: 9px 20px;
+    border-radius: 7px;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+}
+
+
+/* PAGE HEADING */
+
+.page-heading {
+    text-align: center;
+    padding: 65px 20px 45px;
+}
+
+
+.page-heading > p {
+    color: #8b4b36;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+
+.page-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+
+.page-heading h1 span {
+    color: #9b5940;
+    font-style: italic;
+}
+
+
+/* PROGRESS */
+
+.progress {
+    margin: 32px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.progress span {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d6ccc1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b8179;
+    font-size: 13px;
+    background: #f8f4ee;
+}
+
+
+.progress .active {
+    background: #8b4b36;
+    color: white;
+    border-color: #8b4b36;
+}
+
+
+.progress i {
+    width: 65px;
+    height: 1px;
+    background: #d6ccc1;
+}
+
+
+/* MAIN LAYOUT */
+
+.profile-layout {
+    width: 84%;
+    max-width: 1120px;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: 1.7fr 0.8fr;
+    gap: 35px;
+    align-items: start;
+}
+
+
+/* FORM */
+
+.profile-form {
+    background: white;
+    border: 1px solid #e7ded4;
+    border-radius: 14px;
+    padding: 38px;
+}
+
+
+.form-section {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee6dd;
+}
+
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+.form-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #514a44;
+}
+
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    border: 1px solid #ddd4ca;
+    border-radius: 8px;
+    background: #fcfaf7;
+    padding: 13px 14px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    color: #29231f;
+    outline: none;
+}
+
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: #9b5940;
+}
+
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #aaa19a;
+}
+
+
+/* CONTINUE BUTTON */
+
+.continue-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background: #8b4b36;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+
+.continue-btn:hover {
+    background: #713b2b;
+}
+
+
+/* PROFILE TIP */
+
+.profile-tip {
+    background: #eee3d7;
+    border-radius: 14px;
+    padding: 32px;
+}
+
+
+.tip-label {
+    color: #8b4b36;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+
+.profile-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #8b4b36;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    margin-bottom: 22px;
+}
+
+
+.profile-tip h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+
+.profile-tip > p:not(.tip-label) {
+    color: #6d6259;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.tip-line {
+    height: 1px;
+    background: #d7c9bb;
+    margin: 25px 0;
+}
+
+
+.tip-item {
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+
+.tip-item span {
+    color: #8b4b36;
+    font-weight: 700;
+}
+
+
+.tip-item p {
+    font-size: 13px;
+    color: #5e554e;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+
+    .navbar nav {
+        display: none;
+    }
+
+
+    .profile-layout {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-heading {
+        padding-top: 45px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 38px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-form {
+        padding: 25px;
+    }
+
+
+    .profile-tip {
+        padding: 25px;
+    }
+
+
+    .nav-right span {
+        display: none;
+    }
+
+
+    .progress i {
+        width: 35px;
+    }
+
+}

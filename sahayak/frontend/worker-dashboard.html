@@ -38,15 +38,15 @@
             Dashboard
         </a>
 
-        <a href="#">
+        <a href="job-request.html">
             Jobs
         </a>
 
-        <a href="#">
+        <a href="earnings-reviews.html">
             Earnings
         </a>
 
-        <a href="#">
+        <a href="earnings-reviews.html">
             Reviews
         </a>
 
@@ -57,7 +57,7 @@
 
         <span>⌖ Lucknow</span>
 
-        <button>
+        <button type="button" data-logout>
             Logout
         </button>
 
@@ -82,7 +82,7 @@
 
         <h1>
             Good morning,
-            <span>Priya.</span>
+            <span id="workerGreeting">Priya.</span>
         </h1>
 
         <p class="subheading">
@@ -117,12 +117,12 @@
             TODAY'S EARNINGS
         </p>
 
-        <h2>
-            ₹1,250
+        <h2 id="totalEarningsValue">
+            ₹0
         </h2>
 
-        <span class="stat-note">
-            ↑ 12% from yesterday
+        <span class="stat-note" id="totalEarningsNote">
+            Loading earnings...
         </span>
 
     </div>
@@ -135,12 +135,12 @@
             ACTIVE JOBS
         </p>
 
-        <h2>
-            3
+        <h2 id="activeJobsValue">
+            0
         </h2>
 
-        <span class="stat-note">
-            2 today · 1 upcoming
+        <span class="stat-note" id="activeJobsNote">
+            Loading jobs...
         </span>
 
     </div>
@@ -153,13 +153,13 @@
             YOUR RATING
         </p>
 
-        <h2>
-            4.9
+        <h2 id="ratingValue">
+            0.0
             <small>★</small>
         </h2>
 
-        <span class="stat-note">
-            Based on 38 reviews
+        <span class="stat-note" id="ratingNote">
+            Loading reviews...
         </span>
 
     </div>
@@ -172,11 +172,11 @@
             COMPLETED
         </p>
 
-        <h2>
-            42
+        <h2 id="completedValue">
+            0
         </h2>
 
-        <span class="stat-note">
+        <span class="stat-note" id="completedNote">
             Jobs completed
         </span>
 
@@ -194,7 +194,7 @@
 
     <!-- JOBS -->
 
-    <div class="jobs-card">
+    <div class="jobs-card" id="jobsList">
 
 
         <div class="card-header">
@@ -212,7 +212,7 @@
             </div>
 
 
-            <a href="#">
+            <a href="worker-dashboard.html">
                 View all →
             </a>
 
@@ -375,7 +375,7 @@
 
     <!-- PROFILE SIDEBAR -->
 
-    <aside class="profile-card">
+    <aside class="profile-card" id="workerProfileCard">
 
 
         <p class="card-label">
@@ -435,7 +435,7 @@
 
 
         <a
-            href="#"
+            href="profile-setup.html"
             class="profile-button">
 
             View Profile →
@@ -471,7 +471,7 @@
     <div class="action-grid">
 
 
-        <a href="#" class="action-card">
+        <a href="job-request.html" class="action-card">
 
             <div class="action-icon">
                 +
@@ -497,7 +497,7 @@
 
 
 
-        <a href="#" class="action-card">
+        <a href="earnings-reviews.html" class="action-card">
 
             <div class="action-icon">
                 ₹
@@ -557,6 +557,13 @@
 </main>
 
 
+<script src="auth.js"></script>
+<script src="api.js"></script>
+<script src="worker-dashboard.js"></script>
+<script>
+    SahayakAuth.protectWorkerPage();
+    SahayakAuth.setupLogout();
+</script>
 </body>
 
 </html>

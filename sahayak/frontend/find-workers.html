@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
-
+<script src="api.js"></script>
+<script src="find-workers.js"></script>
 <body>
 
 <header class="navbar">
@@ -29,7 +30,7 @@
 
     <div class="nav-right">
         <span class="location">⌖ Lucknow</span>
-        <button class="login-btn">Login</button>
+        <button type="button" class="login-btn" onclick="window.location.href='login.html'">Login</button>
     </div>
 
 </header>
@@ -38,7 +39,7 @@
 <div class="breadcrumb">
     <a href="services.html">Services</a>
     <span>›</span>
-    <a href="service-details.html">Home Cleaning</a>
+    <a href="services-details.html">Home Cleaning</a>
     <span>›</span>
     <span>Find Professionals</span>
 </div>
@@ -99,134 +100,7 @@
     </div>
 
 
-    <div class="workers">
-
-
-        <div class="worker-card">
-
-            <div class="worker-photo">👩🏽</div>
-
-            <div class="worker-info">
-
-                <div class="name-row">
-                    <h2>Priya Sharma</h2>
-                    <span class="verified">✓ Verified</span>
-                </div>
-
-                <p class="role">Home Cleaning Professional</p>
-
-                <div class="stats">
-                    <span>★ <b>4.9</b></span>
-                    <span>126 jobs</span>
-                    <span>2.4 km away</span>
-                </div>
-
-                <div class="tags">
-                    <span>Deep Cleaning</span>
-                    <span>Kitchen</span>
-                    <span>Bathroom</span>
-                </div>
-
-            </div>
-
-            <div class="worker-price">
-
-                <small>STARTING FROM</small>
-
-                <strong>₹399</strong>
-
-                <a href="worker-profile.html">
-                    View Profile →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="worker-card">
-
-            <div class="worker-photo second">👨🏽</div>
-
-            <div class="worker-info">
-
-                <div class="name-row">
-                    <h2>Rahul Verma</h2>
-                    <span class="verified">✓ Verified</span>
-                </div>
-
-                <p class="role">Home Care Professional</p>
-
-                <div class="stats">
-                    <span>★ <b>4.8</b></span>
-                    <span>98 jobs</span>
-                    <span>3.1 km away</span>
-                </div>
-
-                <div class="tags">
-                    <span>Home Cleaning</span>
-                    <span>Dusting</span>
-                    <span>Floor Care</span>
-                </div>
-
-            </div>
-
-            <div class="worker-price">
-
-                <small>STARTING FROM</small>
-
-                <strong>₹449</strong>
-
-                <a href="worker-profile.html">
-                    View Profile →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="worker-card">
-
-            <div class="worker-photo third">👩🏾</div>
-
-            <div class="worker-info">
-
-                <div class="name-row">
-                    <h2>Neha Singh</h2>
-                    <span class="verified">✓ Verified</span>
-                </div>
-
-                <p class="role">Cleaning Specialist</p>
-
-                <div class="stats">
-                    <span>★ <b>4.8</b></span>
-                    <span>87 jobs</span>
-                    <span>4.2 km away</span>
-                </div>
-
-                <div class="tags">
-                    <span>Kitchen</span>
-                    <span>Regular Cleaning</span>
-                </div>
-
-            </div>
-
-            <div class="worker-price">
-
-                <small>STARTING FROM</small>
-
-                <strong>₹399</strong>
-
-                <a href="worker-profile.html">
-                    View Profile →
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
+    <div class="workers" id="workersContainer"></div>
 
 </section>
 

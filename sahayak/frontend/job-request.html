@@ -38,11 +38,11 @@
             Dashboard
         </a>
 
-        <a href="#" class="active">
+        <a href="worker-dashboard.html" class="active">
             Jobs
         </a>
 
-        <a href="#">
+        <a href="earnings-reviews.html">
             Earnings
         </a>
 
@@ -57,7 +57,7 @@
 
         <span>⌖ Lucknow</span>
 
-        <button>
+        <button type="button" data-logout>
             Logout
         </button>
 
@@ -110,22 +110,22 @@
 
     <!-- JOB DETAILS -->
 
-    <div class="request-card">
+    <div class="request-card" id="requestCard">
 
 
         <div class="request-top">
 
             <div>
 
-                <span class="request-status">
+                <span class="request-status" id="requestStatus">
                     NEW REQUEST
                 </span>
 
-                <h2>
+                <h2 id="requestTitle">
                     Home Cleaning
                 </h2>
 
-                <p class="request-subtitle">
+                <p class="request-subtitle" id="requestSubtitle">
                     Standard home cleaning service
                 </p>
 
@@ -138,7 +138,7 @@
                     YOU'LL EARN
                 </span>
 
-                <strong>
+                <strong id="requestPrice">
                     ₹399
                 </strong>
 
@@ -170,11 +170,11 @@
 
                 <div>
 
-                    <h3>
+                    <h3 id="customerName">
                         Ananya Verma
                     </h3>
 
-                    <p>
+                    <p id="customerRating">
                         ★ 4.8 customer rating
                     </p>
 
@@ -197,7 +197,7 @@
                     DATE
                 </span>
 
-                <strong>
+                <strong id="dateValue">
                     26 August 2026
                 </strong>
 
@@ -215,7 +215,7 @@
                     TIME
                 </span>
 
-                <strong>
+                <strong id="timeValue">
                     10:00 AM
                 </strong>
 
@@ -248,11 +248,11 @@
 
                 <div>
 
-                    <strong>
+                    <strong id="addressLabel">
                         Ananya's Home
                     </strong>
 
-                    <p>
+                    <p id="addressValue">
                         14/27, Gomti Nagar,
                         Lucknow, Uttar Pradesh
                     </p>
@@ -276,7 +276,7 @@
 
             <div class="instructions">
 
-                <p>
+                <p id="instructionsText">
                     "Please focus on the kitchen and living room.
                     The cleaning supplies will be available at
                     the house."
@@ -293,22 +293,24 @@
         <div class="request-actions">
 
 
-            <a
-                href="worker-dashboard.html"
+            <button
+                type="button"
+                id="declineJobButton"
                 class="decline-btn">
 
                 Decline
 
-            </a>
+            </button>
 
 
-            <a
-                href="worker-dashboard.html"
+            <button
+                type="button"
+                id="acceptJobButton"
                 class="accept-btn">
 
                 Accept Job →
 
-            </a>
+            </button>
 
 
         </div>
@@ -337,7 +339,7 @@
                     Service
                 </span>
 
-                <strong>
+                <strong id="summaryService">
                     Home Cleaning
                 </strong>
 
@@ -350,7 +352,7 @@
                     Duration
                 </span>
 
-                <strong>
+                <strong id="summaryDuration">
                     2 hours
                 </strong>
 
@@ -363,7 +365,7 @@
                     Distance
                 </span>
 
-                <strong>
+                <strong id="summaryDistance">
                     3.2 km
                 </strong>
 
@@ -379,7 +381,7 @@
                     Your earnings
                 </span>
 
-                <strong>
+                <strong id="summaryEarnings">
                     ₹399
                 </strong>
 
@@ -462,6 +464,13 @@
 </main>
 
 
+<script src="auth.js"></script>
+<script src="api.js"></script>
+<script src="job-request.js"></script>
+<script>
+    SahayakAuth.protectWorkerPage();
+    SahayakAuth.setupLogout();
+</script>
 </body>
 
 </html>

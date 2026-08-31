@@ -8,6 +8,7 @@ const createBooking = async (req, res) => {
             worker,
             service,
             date,
+            time,
             address,
             description,
             totalAmount
@@ -18,6 +19,7 @@ const createBooking = async (req, res) => {
             worker,
             service,
             date,
+            time,
             address,
             description,
             totalAmount

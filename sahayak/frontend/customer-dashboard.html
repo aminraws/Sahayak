@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahayak - Customer Dashboard</title>
+    <link rel="stylesheet" href="style12.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <a href="home.html" class="logo">
+            <div class="logo-icon">S</div>
+            <span>SAHAYAK</span>
+        </a>
+
+        <nav>
+            <a href="customer-dashboard.html" class="active">Dashboard</a>
+            <a href="services.html">Services</a>
+            <a href="find-workers.html">Professionals</a>
+            <a href="#">About us</a>
+        </nav>
+
+        <div class="nav-right">
+            <span>⌖ Lucknow</span>
+            <button type="button" data-logout>Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-heading">
+            <div>
+                <p>MY BOOKINGS</p>
+                <h1>Good morning, <span id="customerGreeting">Customer</span></h1>
+                <p class="subheading">Track your service bookings and upcoming help.</p>
+            </div>
+            <a href="services.html" class="availability">Book a service</a>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>TOTAL BOOKINGS</p>
+                <h2 id="totalBookingsValue">0</h2>
+                <span class="stat-note" id="totalBookingsNote">All time</span>
+            </div>
+
+            <div class="stat-card">
+                <p>PENDING</p>
+                <h2 id="pendingBookingsValue">0</h2>
+                <span class="stat-note" id="pendingBookingsNote">Awaiting response</span>
+            </div>
+
+            <div class="stat-card">
+                <p>ACCEPTED</p>
+                <h2 id="acceptedBookingsValue">0</h2>
+                <span class="stat-note" id="acceptedBookingsNote">Booked and confirmed</span>
+            </div>
+
+            <div class="stat-card">
+                <p>COMPLETED</p>
+                <h2 id="completedBookingsValue">0</h2>
+                <span class="stat-note" id="completedBookingsNote">Finished visits</span>
+            </div>
+        </section>
+
+        <section class="dashboard-layout">
+            <div class="jobs-card">
+                <div class="card-header">
+                    <div>
+                        <p class="card-label">BOOKING HISTORY</p>
+                        <h2>Your bookings</h2>
+                    </div>
+                    <a href="services.html">Book again →</a>
+                </div>
+                <div id="bookingList"></div>
+            </div>
+
+            <aside class="profile-card" id="customerProfileCard">
+                <p class="card-label">CUSTOMER PROFILE</p>
+                <div class="profile-top">
+                    <div class="profile-avatar">C</div>
+                    <div>
+                        <h2 id="customerName">Customer</h2>
+                        <p>Verified user</p>
+                    </div>
+                </div>
+                <div class="profile-service">
+                    <span>EMAIL</span>
+                    <strong id="customerEmail">Not available</strong>
+                </div>
+                <div class="profile-service">
+                    <span>PHONE</span>
+                    <strong id="customerPhone">Not available</strong>
+                </div>
+                <div class="profile-line"></div>
+                <a href="services.html" class="profile-button">Find a worker →</a>
+            </aside>
+        </section>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="api.js"></script>
+    <script src="customer-dashboard.js"></script>
+    <script>
+        SahayakAuth.protectCustomerPage();
+        SahayakAuth.setupLogout();
+    </script>
+</body>
+</html>

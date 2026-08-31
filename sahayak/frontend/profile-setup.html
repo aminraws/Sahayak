@@ -49,7 +49,7 @@
 
         <span>⌖ Lucknow</span>
 
-        <button>Login</button>
+        <button type="button" onclick="window.location.href='login.html'">Login</button>
 
     </div>
 
@@ -99,171 +99,165 @@
 <section class="profile-layout">
 
 
-    <div class="profile-form">
+<form id="profileSetupForm" class="profile-form">
+
+    <div id="profileMessage" class="auth-message" aria-live="polite"></div>
+
+    <div class="form-section">
+
+        <h2>
+            Your details
+        </h2>
 
 
-        <div class="form-section">
-
-            <h2>
-                Your details
-            </h2>
-
-
-            <div class="form-grid">
-
-
-                <div class="field">
-
-                    <label for="name">
-                        Full name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your full name">
-
-                </div>
-
-
-
-                <div class="field">
-
-                    <label for="phone">
-                        Phone number
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        placeholder="Enter your phone number">
-
-                </div>
-
-
-
-                <div class="field">
-
-                    <label for="service">
-                        Service you provide
-                    </label>
-
-                    <select id="service">
-
-                        <option value="">
-                            Select a service
-                        </option>
-
-                        <option>
-                            Home Cleaning
-                        </option>
-
-                        <option>
-                            Plumbing
-                        </option>
-
-                        <option>
-                            Electrical Work
-                        </option>
-
-                        <option>
-                            Beauty & Wellness
-                        </option>
-
-                        <option>
-                            Appliance Repair
-                        </option>
-
-                        <option>
-                            Gardening
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-
-                <div class="field">
-
-                    <label for="experience">
-                        Years of experience
-                    </label>
-
-                    <input
-                        type="number"
-                        id="experience"
-                        min="0"
-                        placeholder="e.g. 3">
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-
-        <div class="form-section">
-
-            <h2>
-                Where do you work?
-            </h2>
+        <div class="form-grid">
 
 
             <div class="field">
 
-                <label for="location">
-                    Service area
+                <label for="name">
+                    Full name
                 </label>
 
                 <input
                     type="text"
-                    id="location"
-                    placeholder="e.g. Gomti Nagar, Lucknow">
+                    id="name"
+                    placeholder="Enter your full name">
 
             </div>
 
-
-        </div>
-
-
-
-        <div class="form-section">
-
-            <h2>
-                Tell customers about you
-            </h2>
 
 
             <div class="field">
 
-                <label for="about">
-                    Short introduction
+                <label for="phone">
+                    Phone number
                 </label>
 
-                <textarea
-                    id="about"
-                    placeholder="Tell customers a little about your experience and the services you provide."></textarea>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number">
+
+            </div>
+
+
+
+            <div class="field">
+
+                <label for="service">
+                    Service you provide
+                </label>
+
+                <select id="service">
+
+                    <option value="">
+                        Select a service
+                    </option>
+
+                    <option value="Home Cleaning">Home Cleaning</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Electrical Work">Electrical Work</option>
+                    <option value="Beauty & Wellness">Beauty & Wellness</option>
+                    <option value="Appliance Repair">Appliance Repair</option>
+                    <option value="Gardening">Gardening</option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="field">
+
+                <label for="experience">
+                    Years of experience
+                </label>
+
+                <input
+                    type="number"
+                    id="experience"
+                    min="0"
+                    placeholder="e.g. 3">
+
+            </div>
+
+            <div class="field">
+
+                <label for="hourlyRate">
+                    Hourly rate (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="hourlyRate"
+                    min="0"
+                    placeholder="e.g. 399">
 
             </div>
 
 
         </div>
 
+    </div>
 
 
-        <a
-            href="verification.html"
-            class="continue-btn">
 
-            Continue to Verification →
+    <div class="form-section">
 
-        </a>
+        <h2>
+            Where do you work?
+        </h2>
+
+
+        <div class="field">
+
+            <label for="location">
+                Service area
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="e.g. Gomti Nagar, Lucknow">
+
+        </div>
 
 
     </div>
+
+
+
+    <div class="form-section">
+
+        <h2>
+            Tell customers about you
+        </h2>
+
+
+        <div class="field">
+
+            <label for="about">
+                Short introduction
+            </label>
+
+            <textarea
+                id="about"
+                placeholder="Tell customers a little about your experience and the services you provide."></textarea>
+
+        </div>
+
+
+    </div>
+
+
+
+    <button type="submit" id="profileSubmitButton" class="continue-btn">
+        Continue to Verification →
+    </button>
+
+
+</form>
 
 
 
@@ -338,6 +332,12 @@
 </main>
 
 
+<script src="auth.js"></script>
+<script src="api.js"></script>
+<script src="profile-setup.js"></script>
+<script>
+    SahayakAuth.protectWorkerPage();
+</script>
 </body>
 
 </html>

@@ -38,7 +38,7 @@
             Dashboard
         </a>
 
-        <a href="#">
+        <a href="worker-dashboard.html">
             Jobs
         </a>
 
@@ -57,7 +57,7 @@
 
         <span>⌖ Lucknow</span>
 
-        <button>
+        <button type="button" data-logout>
             Logout
         </button>
 
@@ -91,7 +91,7 @@
     </p>
 
     <h1>
-        Earnings & <span>reviews.</span>
+        <span id="earningsWorkerName">Priya</span> & <span>reviews.</span>
     </h1>
 
     <p class="heading-description">
@@ -151,7 +151,7 @@
                 TOTAL EARNINGS
             </p>
 
-            <h3>
+            <h3 id="totalEarningsValue">
                 ₹18,450
             </h3>
 
@@ -169,7 +169,7 @@
                 COMPLETED JOBS
             </p>
 
-            <strong>
+            <strong id="completedJobsValue">
                 42
             </strong>
 
@@ -187,7 +187,7 @@
                 AVERAGE PER JOB
             </p>
 
-            <strong>
+            <strong id="averagePerJobValue">
                 ₹439
             </strong>
 
@@ -239,7 +239,7 @@
             </div>
 
 
-            <div class="bars">
+            <div class="bars" id="earningsBars">
 
                 <div class="bar-column">
 
@@ -329,7 +329,7 @@
 
         <div class="rating-summary">
 
-            <strong>
+            <strong id="reviewSummaryValue">
                 4.9
             </strong>
 
@@ -339,7 +339,7 @@
                     ★★★★★
                 </span>
 
-                <p>
+                <p id="reviewCountValue">
                     Based on 38 reviews
                 </p>
 
@@ -351,7 +351,7 @@
 
 
 
-    <div class="reviews-grid">
+    <div class="reviews-grid" id="reviewsList">
 
 
         <!-- REVIEW 1 -->
@@ -534,6 +534,13 @@
 </main>
 
 
+<script src="auth.js"></script>
+<script src="api.js"></script>
+<script src="earnings-reviews.js"></script>
+<script>
+    SahayakAuth.protectWorkerPage();
+    SahayakAuth.setupLogout();
+</script>
 </body>
 
 </html>

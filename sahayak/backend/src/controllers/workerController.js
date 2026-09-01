@@ -1,5 +1,9 @@
-const Worker = require("../models/Worker");
 
+const Worker = require("../models/Worker");
+const Booking = require("../models/Booking");
+
+
+// CREATE WORKER PROFILE
 const createWorkerProfile = async (req, res) => {
     try {
         const {
@@ -8,7 +12,7 @@ const createWorkerProfile = async (req, res) => {
             location,
             hourlyRate,
             description
-        } = req.body;
+        } = req.body || {};
 
         const existingWorker = await Worker.findOne({
             user: req.user.userId
@@ -35,6 +39,8 @@ const createWorkerProfile = async (req, res) => {
         });
 
     } catch (error) {
+        console.error("CREATE WORKER PROFILE ERROR:", error);
+
         res.status(500).json({
             message: "Server error",
             error: error.message
@@ -43,6 +49,7 @@ const createWorkerProfile = async (req, res) => {
 };
 
 
+// GET ALL WORKERS
 const getWorkers = async (req, res) => {
     try {
         const { skill, location, maxRate } = req.query;
@@ -78,6 +85,8 @@ const getWorkers = async (req, res) => {
         });
 
     } catch (error) {
+        console.error("GET WORKERS ERROR:", error);
+
         res.status(500).json({
             message: "Failed to fetch workers",
             error: error.message
@@ -86,6 +95,7 @@ const getWorkers = async (req, res) => {
 };
 
 
+// GET WORKER BY ID
 const getWorkerById = async (req, res) => {
     try {
         const worker = await Worker.findById(req.params.id)
@@ -102,12 +112,17 @@ const getWorkerById = async (req, res) => {
         });
 
     } catch (error) {
+        console.error("GET WORKER BY ID ERROR:", error);
+
         res.status(500).json({
             message: "Failed to fetch worker",
             error: error.message
         });
     }
 };
+
+
+// GET MY WORKER PROFILE
 const getMyWorkerProfile = async (req, res) => {
     try {
         const worker = await Worker.findOne({
@@ -125,12 +140,17 @@ const getMyWorkerProfile = async (req, res) => {
         });
 
     } catch (error) {
+        console.error("GET MY WORKER PROFILE ERROR:", error);
+
         res.status(500).json({
             message: "Failed to fetch worker profile",
             error: error.message
         });
     }
 };
+
+
+// GET BOOKING BY ID
 const getBookingById = async (req, res) => {
     try {
         const booking = await Booking.findById(req.params.id)
@@ -143,16 +163,18 @@ const getBookingById = async (req, res) => {
             });
         }
 
-        // Only the customer or assigned worker can view it
         const worker = await Worker.findOne({
             user: req.user.userId
         });
 
         const isCustomer =
+            booking.customer &&
             booking.customer._id.toString() === req.user.userId.toString();
 
         const isWorker =
-            worker && booking.worker._id.toString() === worker._id.toString();
+            worker &&
+            booking.worker &&
+            booking.worker._id.toString() === worker._id.toString();
 
         if (!isCustomer && !isWorker) {
             return res.status(403).json({
@@ -165,12 +187,16 @@ const getBookingById = async (req, res) => {
         });
 
     } catch (error) {
+        console.error("GET BOOKING ERROR:", error);
+
         res.status(500).json({
             message: "Failed to fetch booking",
             error: error.message
         });
     }
 };
+
+
 module.exports = {
     createWorkerProfile,
     getWorkers,

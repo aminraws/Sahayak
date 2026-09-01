@@ -23,7 +23,7 @@ const registerUser = async (req, res) => {
       password: hashedPassword,
       role,
     });
-
+console.log("USER CREATED:", user._id, user.email);
     res.status(201).json({
       message: "User registered successfully",
       user: {
